@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ 
+<body class ='container'>
+  <style>
+    .container {
+      background-image: url('https://wallpapers.com/images/high/plain-white-calculator-hnl0pbemqpeb4gnq.webp');
+      background-size: cover;      
+      background-position: center;
+      font-family: Arial,sans-serif;
+      margin:0;
+      padding: 0;
+    }
+    h2{
+      color:rgb(56, 11, 11);
+    }
+  </style>
+<h2>Sample Calculator</h2>
+
+<form method="POST">{% csrf_token %}
+  
+  <label>First Number:</label><br>
+  <input type="text" name="fnum" ><br>
+  <label>Second Number:</label><br>
+  <input type="text" name="snum" ><br><br>
+  <div>
+  <select name="opr">
+    <option value="+">Add</option>
+    <option value="-">Sub</option>
+    <option value="*">Mul</option>
+    <option value="/">Divi</option>
+  </select>
+
+  <button type="submit">Calculate</button><br><br>
+</div>
+  <label>Output</label><br>
+  <input type="text" value="{{result}}">
+</form> 
+
+
+</body>
+
+</html>
+
